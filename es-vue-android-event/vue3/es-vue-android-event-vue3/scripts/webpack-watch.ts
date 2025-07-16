@@ -1,3 +1,5 @@
+const run = require('./process.ts')
+
 class WebpackLifeWatchPlugin {
   constructor(options) {
     this.options = options || {}
@@ -12,8 +14,7 @@ class WebpackLifeWatchPlugin {
   }
 
   async broadcast() {
-    await import('zx/globals')
-    await $`adb shell am broadcast -a eskit.sdk.action.CODE_CHANGED -f 32`
+    await run(`adb shell am broadcast -a eskit.sdk.action.CODE_CHANGED -f 32`, '')
   }
 }
 

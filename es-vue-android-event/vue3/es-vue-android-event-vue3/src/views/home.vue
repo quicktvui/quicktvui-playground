@@ -16,6 +16,7 @@ import {IEsEvent} from "../components/IEsEvent";
 
 export default defineComponent({
   name: 'index',
+  emits:[],
   setup() {
     const eventRef = ref<IEsEvent>()
     const eventText = ref<string>('')

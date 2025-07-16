@@ -9,6 +9,7 @@ import { defineComponent } from '@vue/runtime-core'
 
 export default defineComponent({
   name: 'App',
+  emits:[],
   setup() {
     function onESCreate(app, params) {}
 

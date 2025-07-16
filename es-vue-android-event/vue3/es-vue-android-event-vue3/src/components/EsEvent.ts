@@ -1,6 +1,5 @@
 import {defineComponent, h, ref} from 'vue';
 import {ESApp, Native} from "@extscreen/es3-vue";
-import {useESDisplay} from "@extscreen/es3-core";
 
 function registerEsEvent(app: ESApp) {
 
