@@ -1,6 +1,8 @@
 <template>
   <div class="index-root-view-css">
     <span class="index-root-text-view-css">{{ eventText }}</span>
+    <!-- 第三步：使用 component -->
+    <!-- 接收事件监听：@es-event="onEsEvent" -->
     <es-event-view
         ref="eventRef"
         class="index-root-event-view-css"
@@ -16,14 +18,16 @@ import {IEsEvent} from "../components/IEsEvent";
 
 export default defineComponent({
   name: 'index',
-  emits:[],
+  emits: [],
   setup() {
     const eventRef = ref<IEsEvent>()
     const eventText = ref<string>('')
     const onESCreate = (params) => {
+      //TODO 调用方法，发送给安卓层组件的一条消息
       eventRef.value?.sendEsMessage('这是一条消息~')
     }
 
+    //TODO 接收安卓层发送的事件，进行显示
     function onEsEvent(evt) {
       eventText.value = evt.message + '  ' + evt.code;
       console.log('-----------ESEvent-------->>>>>', evt.message, evt.code);

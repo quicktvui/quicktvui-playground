@@ -26,12 +26,12 @@ import {QuickTVUI} from '@quicktvui/quicktvui3'
 
 app.use(QuickTVUI)
 
-//----------------------------------------------------------------------
+//----------------------------注册element------------------------------------------
 import registerEsEventComponent from "./components/EsEventComponent";
 
 app.use(registerEsEventComponent);
 
-//----------------------------------------------------------------------
+//----------------------------注册component------------------------------------------
 import registerEsEvent from "./components/EsEvent";
 
 app.use(registerEsEvent);
